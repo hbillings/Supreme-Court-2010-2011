@@ -38,7 +38,7 @@
     <script type="text/javascript" src="http://media3.washingtonpost.com/wp-srv/graphics/js/jquery.cycle.all.min.js"></script>
     <script type="text/javascript" src="http://media3.washingtonpost.com/wp-srv/graphics/templates/js/static-base.js"></script>
     <!-- Include your custom scripts here -->
-    <script type="text/javascript" src="file:///Users/billingshj/Projects/supreme-court/court.js"></script>
+    <script type="text/javascript" src="file://localhost/Users/hbillings/Projects/supreme-court/court.js"></script>
 </head> 
 <body class="static"> 
  
@@ -68,7 +68,27 @@
                 <h1>Headline</h1>
                 <p class="body">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.</p>
                 <div id="cases">
-                    <h2>Key Supreme Court cases, 2010-2011</h2>
+					<ul id="sections">
+						<h4><li class="current">Key cases</li></h4>
+						<h4><li>Majority/minority votes</li></h4>
+						<h4><li>Justice agreement</li></h4>
+					</ul>
+					<br class="clear" />
+                    <h2>of the 2010-2011 United States Supreme Court</h2>
+					<ul id="case-list">
+                        <li class="selected" id="snyder"></li>
+                        <li id="connick"></li>
+                        <li id="skinner"></li>
+                        <li id="christian"></li>
+                        <li id="plata"></li>
+                        <li id="commerce"></li>
+                        <li id="ashcroft"></li>
+                        <li id="jdb"></li>
+                        <li id="walmart"></li>
+                        <li id="merchants"></li>
+                        <li id="enterprise"></li>
+                        <li id="power"></li>
+                    </ul>
                     <div id="case">
                         <div id="case-info">
                             <h3 id="plaintiff"></h3>
@@ -88,20 +108,7 @@
                         </div>
                         
                     </div>
-                    <ul id="case-list">
-                        <li class="selected" id="snyder"></li>
-                        <li id="connick"></li>
-                        <li id="skinner"></li>
-                        <li id="christian"></li>
-                        <li id="plata"></li>
-                        <li id="commerce"></li>
-                        <li id="ashcroft"></li>
-                        <li id="jdb"></li>
-                        <li id="walmart"></li>
-                        <li id="merchants"></li>
-                        <li id="enterprise"></li>
-                        <li id="power"></li>
-                    </ul>
+                    
                     <br class="clear" />
                 </div>
                 
