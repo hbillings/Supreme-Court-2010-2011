@@ -1,0 +1,144 @@
+<!DOCTYPE html> 
+
+<html lang="en"> 
+<head> 
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    
+    <!-- #FILL THIS OUT -->
+    <title>TITLE - The Washington Post</title> 
+    <meta name="description" content="DESCRIPTION" /> 
+    <meta name="keywords" content="KEYWORDS" />
+    <link rel="canonical" href="PAGE_URL" /> 
+    <link rel="shorturl" href="PAGE_SHORTURL" /> 
+    <meta property="og:image" content="IMAGE_URL"/>
+    
+    <!-- JS Vars: Omniture, Ads, Nav --> 
+    <!-- #FILL THIS OUT (a good check is to make sure ads are showing up) -->
+    <script type="text/javascript" charset="utf-8"> 
+        var thisNode = 'world',
+            navNode = 'world',
+            commercialNode = 'world',
+            wp_channel = 'world';
+        //var wp_content_type = 'interactive graphics'; // uncomment this line if your page is a graphic
+    </script> 
+    
+    <!-- FB / Sharing Meta --> 
+    <meta property="fb:app_id" content="41245586762" />
+    <meta property="og:site_name" content="The Washington Post" />
+     
+    <link type="text/css" rel="stylesheet" href="http://media3.washingtonpost.com/wpost/css/combo?context=eidos&c=true&m=true&r=/2.0.0/reset.css&r=/2.0.0/structure.css&r=/2.0.0/header.css&r=/2.0.0/footer.css&r=/2.0.0/right-rail.css&r=/2.0.0/rules.css&r=/2.0.0/forms.css&r=/2.0.0/base.css&r=/2.0.0/modal.css&r=/2.0.0/accordion.css&r=/2.0.0/storyflipper.css&r=/2.0.0/flipper.css&r=/2.0.0/modules.css&r=/2.0.0/epaper.css&r=/2.0.0/calendar-widget.css&r=/2.0.0/widgets.css&r=/2.0.0/carousel.css&r=/2.0.0/wsodEWA.css&r=/2.0.0/ads.css&r=/2.0.0/network-news.css&r=/echo2/twp_comments_echo2.css" charset="utf-8">
+    <link type="text/css" rel="stylesheet" href="http://media3.washingtonpost.com/wp-srv/graphics/templates/css/static-base.css" charset="utf-8">
+    <!--[if lte IE 7]> <link type="text/css" rel="stylesheet" href="http://media3.washingtonpost.com/wp-srv/graphics/templates/css/static-base-ie.css" charset="utf-8"> <![endif]-->
+    <!-- Include your custom css here -->
+    <link type="text/css" rel="stylesheet" href="court.css" charset="utf-8">
+    
+    <script type="text/javascript" src="http://media3.washingtonpost.com/wpost/js/combo?context=wpost&amp;m=true&amp;c=false&amp;r=/yui-base/3.3.0/build/yui/yui-min.js&amp;r=/yui-base/twp-yui/twp-yui.js&amp;r=/yui-base/global/global-external-modules.js&amp;r=/jquery-1.4.2.js"></script> 
+    <script type="text/javascript" charset="utf-8">jQuery.noConflict();</script>
+    <script type="text/javascript" src="http://media3.washingtonpost.com/wpost/js/combo?c=true&amp;m=false&amp;context=wp-static&amp;r=/ad/wpni_generic_ad.js&amp;r=/ad/wp_ad.js"></script>
+    <script type="text/javascript" src="http://media3.washingtonpost.com/wp-srv/graphics/js/jquery.cycle.all.min.js"></script>
+    <script type="text/javascript" src="http://media3.washingtonpost.com/wp-srv/graphics/templates/js/static-base.js"></script>
+    <!-- Include your custom scripts here -->
+    <script type="text/javascript" src="file:///Users/billingshj/Projects/supreme-court/court.js"></script>
+</head> 
+<body class="static"> 
+ 
+    <div id="shell"> 
+        <!-- #FILL THIS OUT -->
+        <!-- Example: data-config="section=homepage" -->
+        <!-- can also add subsection and turn off hot topics, ex: data-config="section=sports&subsection=redskins&hotTopics=false" -->
+        <div id="header-v3" class="external" data-config=""></div> 
+        
+        <div id="leaderboard"> 
+            <div class="ad-marker"> 
+                <script type="text/javascript">placeAd2(commercialNode+'','leaderboard',false,'');</script> 
+            </div> 
+        </div> 
+ 
+        <div id="content"> 
+ 
+            <!-- Main content --> 
+            <div class="wp-column ten wp-pad-right">
+            
+                <!-- Social media include -->
+                <div class="header-social border-bottom"><div id="social_links"></div></div>
+                <script type="text/javascript" src="http://media3.washingtonpost.com/wp-srv/graphics/js/social-media-strip.js"></script>
+                <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+                
+                <!-- Content -->
+                <h1>Headline</h1>
+                <p class="body">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.</p>
+                <div id="cases">
+                    <h2>Key Supreme Court cases, 2010-2011</h2>
+                    <div id="case">
+                        <div id="case-info">
+                            <h3 id="plaintiff"></h3>
+                            <h3>v. <span id="defendant"></span></h3>
+                            <p></p>
+                            <div id="judges">
+                                <div id="pro">
+                                    <h4>Majority justices</h4>
+                                    <div id="pro-list"></div>
+                                </div>
+                                <div id="con">
+                                    <h4>Dissenting justices</h4>
+                                    <div id="con-list"></div>
+                                </div>
+                            </div>
+                           <br class="clear" />
+                        </div>
+                        
+                    </div>
+                    <ul id="case-list">
+                        <li class="selected" id="snyder"></li>
+                        <li id="connick"></li>
+                        <li id="skinner"></li>
+                        <li id="christian"></li>
+                        <li id="plata"></li>
+                        <li id="commerce"></li>
+                        <li id="ashcroft"></li>
+                        <li id="jdb"></li>
+                        <li id="walmart"></li>
+                        <li id="merchants"></li>
+                        <li id="enterprise"></li>
+                        <li id="power"></li>
+                    </ul>
+                    <br class="clear" />
+                </div>
+                
+                <p class="credit">SOURCE: XXX. GRAPHIC: XXX - The Washington Post. Published XXX XX, XXXX.</p>
+                
+            </div><!-- end Main content -->
+            
+            <!-- Right rail -->
+            <div class="wp-column six end">
+               <div id="right-rail" class="module right-rail background" style="min-height:550px">
+                   <div class="position-top right-rail-cap right-rail-top"></div>
+                   <div class="position-bottom right-rail-cap right-rail-bottom"></div>
+                    <div class="padding-left padding-bottom padding-right">
+                        <!--FLEX_SS_BB_HP AD BEGIN-->
+                        <div id="slug_flex_ss_bb_hp" style="display:none">
+                            <div id="wpni_adi_flex_ss_bb_hp" class="ads slug flex_ss_bb_hp rr">
+                                <script type="text/javascript">placeAd2(commercialNode,"flex_ss_bb_hp",false,"");</script>
+                            </div>
+                        </div>
+                        <!--FLEX_SS_BB_HP AD END-->
+                    </div>
+                </div>
+            </div><!-- end Right rail -->
+            
+            <div class="clear"></div>
+        </div><!-- end #content -->
+        <div id="footer-v3" class="external"></div> 
+    </div><!-- end #shell -->
+ 
+    <!-- omniture --> 
+    <script type="text/javascript" src="http://js.revsci.net/gateway/gw.js?csid=J05531"></script> 
+    <script type="text/javascript" src="http://media3.washingtonpost.com/wpost/js/combo?c=true&amp;m=false&amp;context=wp-static&amp;r=/ad/audsci.js&amp;r=/js/vendor/quantcast.js"></script> 
+    <noscript><img src="http://pixel.quantserve.com/pixel/p-5cYn7dCzvaeyA.gif" style="display: none;" border="0" height="1" width="1" alt="Quantcast"/></noscript> 
+    <script language="JavaScript" src="http://media.washingtonpost.com/wp-srv/javascript/omniture/omniture-utils.js"></script> 
+    <script>try{echoOmniture()}catch(e){}</script> 
+    <script type="text/javascript" src="http://media.washingtonpost.com/wp-srv/javascript/placeSiteMetrix.js"></script> 
+    <script type="text/javascript">placeSiteMetrix();</script> 
+ 
+</body> 
+</html>
