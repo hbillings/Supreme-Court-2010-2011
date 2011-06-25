@@ -1,25 +1,29 @@
 /* Common */
 
+h2, h3, h4, h5 {
+    font-family: Arial, sans-serif;
+}
+
 h2 {
     font-size: 1.8em;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 h3 {
-   /*font-family: Arial, sans-serif;*/
     font-size: 1.6em;
 }
 
 h4 {
-    /*font-family: Arial, sans-serif;*/
     font-size: 1.3em;
     padding: 0px;
     margin: 0px;
     line-height: 1.2em;
 }
 
-#judges h4 {
+/*Key Cases*/
+#pro h4, #con h4 {
     margin-bottom: 10px;
+    font-size: 1.2em;
 }
 
 #case-info p {
@@ -28,29 +32,54 @@ h4 {
 
 ul#sections li {
     float: left;
-    color: #999;
-    /*border-top: 2px solid #999;*/
-    margin: 0px 20px 0px 0px;
-    padding: 8px 3px 3px 3px;
+    margin: 0px 20px 3px 0px;
+    padding: 5px;
+    color: #666;
+    background: #efefef url('images/gradient.png');
+    background-repeat: repeat-x;
+    background-position: bottom left;
+    border-top: solid 1px #ccc;
+    border-right: solid 1px #ccc;
+    border-left: solid 1px #ccc;
+    border-bottom: solid 1px #ababab;
+    border-radius: 5px 5px;
+    -moz-border-radius: 5px 5px;
+    -webkit-border-radius: 5px 5px;
+    cursor: pointer;
+
 }
 
-ul#sections li.current {
+ul#sections h4 li.current {
     color: #000;
-    border-top: 2px solid #057EC2;  
-    background: #ebf2f6; 
+   /* border: 1px solid #057EC2;*/
+    background: #fff url('images/gradient-selected.png');
+    background-repeat: repeat-x;
+    background-position: top left;
+    border-top: solid 1px #ababab;
+    border-bottom: solid 1px #ccc;
 }
 
-/* Structure */
+ul#sections li.hover-button {
+    background: #fff url('images/gradient.png');
+    color: #000;
+    background-repeat: repeat-x;
+    background-position: bottom left;
+}
+
+div#cases ul#case-list li.hover{
+    background: #fff;
+    color: #000;
+}
 
 #cases {
     /*position:absolute;  this causes the footer to overlay the content when short ads are displayed */
     width: 580px;
     padding: 20px;
-    background: #fff;
-/*    border: 1px solid #999;
+    background: #dde9ef;
+    border: 1px solid #999;
     border-radius: 5px 5px;
     -moz-border-radius: 5px 5px;
-    -webkit-border-radius: 5px 5px;*/
+    -webkit-border-radius: 5px 5px;
 }
 
 #case {
@@ -60,13 +89,22 @@ ul#sections li.current {
     height: 100%;
 }
 #case-info {
-    padding: 10px;
-    background: #ebf2f6;
+    padding: 15px;
+    background: #fff;
     min-height: 295px;
-/*  border-left: 2px solid #057EC2;
-    border-radius: 5px 5px;
-    -moz-border-radius: 5px 5px;
-    -webkit-border-radius: 5px 5px;*/
+/* border-right: 2px solid #057EC2;*/
+    border-top: solid 1px #ccc;
+    border-right: solid 1px #ccc;
+    border-bottom: solid 1px #dcdcdc;
+    border-top-right-radius: 5px 5px;
+    border-bottom-right-radius: 5px 5px;
+    border-bottom-left-radius: 5px 5px;
+    -moz-border-radius-topright: 5px 5px;
+    -moz-border-radius-bottomright: 5px 5px;
+    -moz-border-radius-bottomleft: 5px 5px;
+    -webkit-border-top-right-radius: 5px 5px;
+    -webkit-border-bottom-right-radius: 5px 5px;
+    -webkit-border-bottom-left-radius: 5px 5px;
 }
 
 #judges {
@@ -76,21 +114,21 @@ ul#sections li.current {
 }
 
 #judges #pro {
-    width: 150px;
+    width: 140px;
     clear: both;
     float: left;
     margin-right: 50px;
 }
 
 #judges #con {
-    width: 150px;
+    width: 140px;
     float: left;
 }
 
-#pro li, #con li {
+/*#pro li, #con li {
     margin-right: 10px;
     float: left;
-}
+} */
 
 #case-list {
     position: relative;
@@ -101,9 +139,10 @@ ul#sections li.current {
 div#cases ul#case-list li.selected {
     color: #000;
     font-weight: bold;
-    border-left: 2px solid #057EC2;
-    background: #ebf2f6;
-/*    border-top: solid 1px #999;
+    background: #fff;
+    border-right: none;
+/*    border-left: 2px solid #057EC2;
+     border-top: solid 1px #999;
     border-right: solid 1px #999;
     border-bottom: solid 1px #999;
     border-top-right-radius: 5px 5px;
@@ -118,10 +157,108 @@ div#cases ul#case-list li.selected {
 div#cases ul#case-list li {
     cursor: pointer;
     font-size: 1.2em;
-    padding: 3px 20px 2px 3px;
+    padding: 6px 20px 4px 6px;
     min-height: 15px;
-    margin: 0px 0px 10px 0px;
+    margin: 0px;
     color: #666;
+    background: #efefef;
+    border-top: solid 1px #ccc;
+    border-right: solid 1px #dcdcdc;
+    border-bottom: none;
+    border-left: solid 1px #ccc;
+    border-top-left-radius: 5px 5px;
+    border-bottom-left-radius: 5px 5px;
+    -moz-border-radius-topleft: 5px 5px;
+    -moz-border-radius-bottomleft: 5px 5px;
+    -webkit-border-top-left-radius: 5px 5px;
+    -webkit-border-bottom-left-radius: 5px 5px;
+}
+
+div#cases ul#case-list li:last-child {
+    border-bottom: solid 1px #ccc;
+}
+
+/*Majority/Minority Votes*/
+.backdrop {
+    padding: 15px;
+    background: #fff;
+    min-height: 295px;
+    border: solid 1px #ccc;
+    border-radius: 5px 5px;
+    -moz-border-radius: 5px 5px;
+    -webkit-border-radius: 5px 5px;
+}
+
+#justices {
+    width: 110px;
+    float: left;
+    margin-right: 2px;
+}
+
+#justice-names {
+    padding-top: 5px;
+    text-align: right;
+}
+
+#justice-names li {
+    clear: left;
+    height: 45px;
+    margin: 0px 3px 5px 0px;
+}
+
+#justice-names p {
+    font-size: 1.4em;
+    font-weight: bold;
+    padding-top: 13px;
+}
+
+#justices li p {
+    font-size: 1.4em;
+    line-height: 1.2em;
+    margin-bottom: 10px;
+}
+
+#ginsburg p{
+    padding-top: 5px;
+    line-height: 1.1em;
+}
+
+#justices li img {
+    float: left;
+    height: 40px;
+    margin-right: 3px;
+}
+
+#bar-chart {
+    float: left;
+    width: 425px;
+    font-weight: bold;
+    text-align: left;
+}
+
+#bar-chart li {
+    width: 425px;
+    float: left;
+    background: #dcdcdc;
+    margin: 15px 0px 10px 0px;
+    font-size: 1.2em;
+}
+
+#bar-chart li div {
+    background: #057EC2;
+    height: 25px;
+    padding-right: 10px;
+    color: #fff;
+}
+
+#bar-chart li p.percent {
+    float: right;
+}
+
+#bar-chart li p {
+    margin: 2px 0px 0px 4px;
+    float: left;
+    max-width: 50%;
 }
 
 /*media queries*/

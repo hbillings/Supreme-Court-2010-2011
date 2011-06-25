@@ -7,21 +7,21 @@ $(document).ready(function() {
       "summary":"The justices unanimously shot down the NFL\'s longtime quest for protection from antitrust laws in a decision that was cheered by its players\' association and held lessons for other professional sports leagues. The court said that the NFL should be considered as 32 individual, independent teams when it came to selling licensed items such as jerseys and caps. It rejected the league\'s argument that it should be exempted from antitrust laws because it acts as a single entity.",
       "majority":"Alito, Ginsburg, Scalia, Sotomayor, Thomas",
       "minority":"Kagan, Kennedy, Breyer, Roberts"});*/
-    
+
    var justices = {
-      "alito":"Samuel Anthony Alito Jr.",
-      "breyer":"Stephen G. Breyer",
+      "alito":"Samuel Alito",
+      "breyer":"Stephen Breyer",
       "ginsburg":"Ruth Bader Ginsburg",
       "kagan":"Elena Kagan",
-      "kennedy":"Anthony M. Kennedy",
-      "roberts":"John G. Roberts Jr. (chief justice)",
+      "kennedy":"Anthony Kennedy",
+      "roberts":"John Roberts (chief justice)",
       "scalia":"Antonin Scalia",
       "sotomayor":"Sonia Sotomayor",
       "thomas":"Clarence Thomas"
       };
-      
+
    //copy/paste: justices.alito, justices.breyer, justices.ginsburg, justices.kagan, justices.kennedy, justices.roberts, justices.scalia, justices.sotomayor, justices.thomas
-   
+
    //Snyder v. Phelps
    var snyder_array = {
       "plaintiff": "Snyder",
@@ -31,7 +31,7 @@ $(document).ready(function() {
       "summary":"The court gutted one of federal prosecutors' favorite tools for pursuing corrupt politicians and corporate chiefs, casting doubt on the convictions of two prominent executives snared by the law: former Enron chief executive Jeffrey K. Skilling (right) and newspaper magnate Conrad Black (left). The justices said prosecutors have stretched too far a federal statute that makes it a crime to deprive the public or a company of the \"intangible right of honest services.\" The decision did not overturn the convictions of Skilling and Black, but it said they can renew their arguments in lower courts.",
       "winner":"defendant"};
    var snyder = eval("snyder_array");
-   
+
    //Connick v. Thompson
    var connick_array = {
       "plaintiff": "Connick",
@@ -41,7 +41,7 @@ $(document).ready(function() {
       "summary":"summary",
       "winner":"plaintiff"};
    var connick = eval("connick_array");
-   
+
    //Skinner v. Switzer
    var skinner_array = {
       "plaintiff": "Skinner",
@@ -51,7 +51,7 @@ $(document).ready(function() {
       "summary":"summary",
       "winner":"plaintiff"};
    var skinner = eval("skinner_array");
-   
+
    //AZ Christian v. Winn
    var christian_array = {
       "plaintiff": "Arizona Christian School Tuition Org.",
@@ -61,7 +61,7 @@ $(document).ready(function() {
       "summary":"summary",
       "winner":"plaintiff"};
    var christian = eval("christian_array");
-   
+
    //Brown v. Plata
    var plata_array = {
       "plaintiff": "Brown",
@@ -71,7 +71,7 @@ $(document).ready(function() {
       "summary":"summary",
       "winner":"plaintiff"};
    var plata = eval("plata_array");
-   
+
    //Brown v. Plata
    var plata_array = {
       "plaintiff": "Brown",
@@ -81,7 +81,7 @@ $(document).ready(function() {
       "summary":"summary",
       "winner":"defendant"};
    var plata = eval("plata_array");
-   
+
    //Chamber of Commerce v. Whiting
    var commerce_array = {
       "plaintiff": "Chamber of Commerce",
@@ -91,7 +91,7 @@ $(document).ready(function() {
       "summary":"summary",
       "winner":"defendant"};
    var commerce = eval("commerce_array");
-   
+
    //Ashcroft v. Al-Kidd
    var ashcroft_array = {
       "plaintiff": "Ashcroft",
@@ -101,7 +101,7 @@ $(document).ready(function() {
       "summary":"summary",
       "winner":"defendant"};
    var ashcroft = eval("ashcroft_array");
-   
+
    //JDB v. NC
    var jdb_array = {
       "plaintiff": "J.D.B.",
@@ -111,7 +111,7 @@ $(document).ready(function() {
       "summary":"summary",
       "winner":"defendant"};
    var jdb = eval("jdb_array");
-   
+
    //Walmart v. Dukes
    var walmart_array = {
       "plaintiff": "Wal-Mart",
@@ -121,7 +121,7 @@ $(document).ready(function() {
       "summary":"summary",
       "winner":"defendant"};
    var walmart = eval("walmart_array");
-   
+
    //Brown v. Entertainment Merchants Assn.
    var merchants_array = {
       "plaintiff": "Brown",
@@ -131,7 +131,7 @@ $(document).ready(function() {
       "summary":"summary",
       "winner":"defendant"};
    var merchants = eval("merchants_array");
-   
+
    //AZ Free Enterprise v. Bennett
    var enterprise_array = {
       "plaintiff": "Arizona Free Enterprise",
@@ -141,7 +141,7 @@ $(document).ready(function() {
       "summary":"summary",
       "winner":"defendant"};
    var enterprise = eval("enterprise_array");
-   
+
    //American Electric Power v. CT
    var power_array = {
       "plaintiff": "American Electric Power",
@@ -151,14 +151,14 @@ $(document).ready(function() {
       "summary":"summary",
       "winner":"defendant"};
    var power = eval("power_array");
-   
+
    //load first case and case links when page loads
    $('#case-info #plaintiff').html(snyder.plaintiff);
    $('#case-info #defendant').html(snyder.defendant + ' <img src="images/check.png">');
    $('#case-info p').html(snyder.summary);
    $('#judges #pro-list').html(snyder.majority.join(', '));
    $('#judges #con-list').html(snyder.minority.join(', '));
-   
+
    //should be for...each loop
    $('#snyder').html(snyder.plaintiff + ' v. ' + snyder.defendant);
    $('#connick').html(connick.plaintiff + ' v. ' + connick.defendant);
@@ -172,7 +172,7 @@ $(document).ready(function() {
    $('#merchants').html(merchants.plaintiff + ' v. ' + merchants.defendant);
    $('#enterprise').html(enterprise.plaintiff + ' v. ' + enterprise.defendant);
    $('#power').html(power.plaintiff + ' v. ' + power.defendant);
-   
+
    //select a case
    //gotta be a better way to do this, like with a loop
    var which_case;
@@ -224,7 +224,7 @@ $(document).ready(function() {
       which_case = power;
       populate(which_case);
    });
-   
+
    //pull in data associated with given case
    function populate(the_case){
       if (the_case.winner == "plaintiff") {
@@ -243,11 +243,43 @@ $(document).ready(function() {
         $('#judges #con-list').append('<br />*Justice Elena Kagan recused herself from this case.')
       }
    }
-          
-    // highlight cases when clicked
+
+    // click states
     $('div#cases ul#case-list li').click(function() {
          $('.selected').removeClass('selected');
          $(this).addClass('selected');
     });
-    
+
+    //the button code below should replicate what this next bit does, but it's not working. Need to come back to that.
+    $('ul#sections h4 li').click(function() {
+        $('.current').removeClass('current');
+        $(this).addClass('current');
+    });
+
+
+    //highlight cases
+
+    $('div#cases ul#case-list li').hover(function() {
+            $(this).addClass('hover'); },
+         function() {
+            $(this).removeClass('hover');
+    });
+
+//buttons
+    if ($('#content').find('ul#sections li').length > 0) {
+        $('#content').find('ul#sections li').mouseenter(function() {
+            $(this).addClass('hover-button')
+        }).mouseout(function() {
+            $(this).removeClass('hover-button')
+        }).click(function() {
+            $('#content').find('.court-panel').each(function(index) {$(this).hide()});
+            $(this).siblings('li.current').each(function(index) {$(this).removeClass('h4 li.current')});
+            var panelId = $('ul#sections li').index(this);
+            $(this).addClass('current');
+            $('#content').find('.court-panel').eq(panelId).show();
+        });
+        $('#content').find('ul#sections li').eq(0).click();
+    }
+
+
 });
